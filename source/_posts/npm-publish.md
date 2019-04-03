@@ -72,6 +72,9 @@ npm init
 通过`lerna bootstrap`处理依赖
 
 `lerna bootstrap`会安装并处理package之间的依赖问题，比如`packages/lerna-demo-module-a`依赖了`packages/lerna-demo-core`，`bootstrap`会在`lerna-demo-module-a`的`node_modules`目录下建立指向`lerna-demo-core`的软链接。
+```js
+lerna add lerna-demo-core --scope=lerna-demo-module-a
+```
 
 此处有个[活生生的例子](https://github.com/soolx/lerna-demo)
 
